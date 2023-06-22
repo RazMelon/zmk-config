@@ -58,10 +58,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-  &kp ESC  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET  &kp LEFT_BRACKET    &kp UP  &kp RIGHT_BRACKET  &trans         &kp BSPC
- &kp CAPS    &trans  &trans    &trans    &trans     &trans     &trans          &kp LEFT  &kp DOWN          &kp RIGHT  &trans     &kp KP_ENTER
-&kp LSHFT    &trans  &trans    &trans    &trans     &trans     &trans            &trans    &trans             &trans  &trans  &rgb_ug RGB_TOG
-                               &trans    &trans   &kp LGUI     &trans            &trans    &trans
+  &kp ESC   &kp EXCL    &kp AT      &kp HASH              &kp DLLR              &kp PRCNT  &kp CARET  &kp LEFT_BRACKET    &kp UP  &kp RIGHT_BRACKET  &trans         &kp BSPC
+ &kp CAPS  &kp CARET  &kp AMPS  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS     &trans          &kp LEFT  &kp DOWN          &kp RIGHT  &trans     &kp KP_ENTER
+&kp LSHFT     &trans    &trans        &trans                &trans                 &trans     &trans            &trans    &trans             &trans  &trans  &rgb_ug RGB_TOG
+                                      &trans                &trans               &kp LGUI     &trans            &trans    &trans
             >;
         };
     };
