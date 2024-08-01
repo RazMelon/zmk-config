@@ -1,0 +1,80 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/rgb.h>
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+    };
+
+    macros {
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            //  ------ ----- ----- ----- ----- -----     ----- ------ ----- ----- ----- ------
+            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
+            //  ------ ----- ----- ----- ----- -----     ----- ------ ----- ----- ----- ------
+            // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+            //  ------ ----- ----- ----- ----- -----     ----- ------ ----- ----- ----- ------
+            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
+            //  ------ ----- ----- ----- ----- -----     ----- ------ ----- ----- ----- ------
+            //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+            //                     ----- ----- -----     ----- ------ ----- 
+
+            bindings = <
+  &kp TAB  &kp Q  &kp W     &kp E  &kp R                     &kp T        &kp Y  &kp U      &kp I    &kp O     &kp P       &kp BSPC
+&kp LCTRL  &kp A  &kp S     &kp D  &kp F                     &kp G        &kp H  &kp J      &kp K    &kp L  &kp SEMI        &kp SQT
+&kp LSHFT  &kp Z  &kp X     &kp C  &kp V                     &kp B        &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp BACKSLASH
+                         &kp LGUI  &mo 1  &mt LEFT_SHIFT BACKSPACE  &lt 1 SPACE  &mo 2  &kp ENTER
+            >;
+        };
+
+        lower_layer {
+            //  ------ ----- ----- ----- ----- -----     ----- ----- ----- ----- ----- ------
+            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
+            //  ------ ----- ----- ----- ----- -----     ----- ----- ----- ----- ----- ------
+            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
+            //  ------ ----- ----- ----- ----- -----     ----- ----- ----- ----- ----- ------
+            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
+            //  ------ ----- ----- ----- ----- -----     ----- ----- ----- ----- ----- ------
+            //                    | GUI |     | SPC |   | ENT |     | ALT |
+            //                     ----- ----- -----     ----- ----- ----- 
+
+            bindings = <
+  &kp TAB        &kp N1        &kp N2        &kp N3        &kp N4      &kp N5             &kp N6            &kp N7             &kp N8      &kp N9     &kp N0              &kp BSPC
+&kp LCTRL  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR       &kp C_VOL_UP  &kp LEFT_BRACKET  &kp RIGHT_BRACKET   &kp MINUS  &kp EQUAL  &kp C_BRIGHTNESS_INC
+&kp LSHFT        &trans        &trans        &trans        &trans      &trans  &kp C_VOLUME_DOWN         &kp GRAVE          &kp COMMA  &kp PERIOD  &kp SLASH  &kp C_BRIGHTNESS_DEC
+                                             &trans        &trans      &trans             &trans            &trans           &kp RALT
+            >;
+        };
+
+        raise_layer {
+            //  ------ ----- ----- ----- ----- -----     ----- ----- ----- ----- ----- ------
+            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
+            //  ------ ----- ----- ----- ----- -----     ----- ----- ----- ----- ----- ------
+            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
+            //  ------ ----- ----- ----- ----- -----     ----- ----- ----- ----- ----- ------
+            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+            //  ------ ----- ----- ----- ----- -----     ----- ----- ----- ----- ----- ------
+            //                    | GUI |     | SPC |   | ENT |     | ALT |
+            //                     ----- ----- -----     ----- ----- ----- 
+
+            bindings = <
+  &kp ESC   &kp EXCL    &kp AT       &kp HASH              &kp DLLR              &kp PRCNT             &kp CARET  &kp LEFT_BRACKET    &kp UP  &kp RIGHT_BRACKET  &trans         &kp BSPC
+ &kp CAPS  &kp CARET  &kp AMPS   &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp C_AC_SCROLL_UP          &kp LEFT  &kp DOWN          &kp RIGHT  &trans     &kp KP_ENTER
+&kp LSHFT     &trans    &trans         &trans                &trans                 &trans  &kp C_AC_SCROLL_DOWN            &trans    &trans             &trans  &trans  &rgb_ug RGB_TOG
+                                &kp RIGHT_ALT                &trans               &kp LGUI                &trans            &trans    &trans
+            >;
+        };
+    };
+};
