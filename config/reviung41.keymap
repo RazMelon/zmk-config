@@ -37,8 +37,8 @@
 
             bindings = <
 &trans  &kp N1        &kp N2        &kp N3                &kp N4                 &kp N5                 &kp N6             &kp N7            &kp N8             &kp N9     &kp N0     &kp BACKSPACE
-&trans  &trans        &trans        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans                 &kp C_VOLUME_UP    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp MINUS  &kp EQUAL  &trans
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2          &bt BT_SEL 3           &bt BT_CLR             &kp C_VOLUME_DOWN  &kp GRAVE         &trans             &trans     &kp PSCRN  &trans
+&trans  &trans        &trans        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans                 &kp C_VOLUME_UP    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp MINUS  &kp EQUAL  &kp C_BRIGHTNESS_INC
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2          &bt BT_SEL 3           &bt BT_CLR             &kp C_VOLUME_DOWN  &kp GRAVE         &trans             &trans     &kp PSCRN  &kp C_BRIGHTNESS_DEC
                                     &trans                &trans                             &kp SPACE                     &mo 3             &trans
             >;
         };
